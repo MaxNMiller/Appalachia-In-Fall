@@ -1,0 +1,44 @@
+{
+  "title": "Appalachia in Fall",
+  "runner": "preview/runner.js (bundled WebGL2)",
+  "author": "Artwork: Max Miller. Based on Rainforest by Inigo Quilez, 2016.",
+  "passes": [
+    {
+      "name": "Buffer A",
+      "file": "buffer_a.glsl",
+      "format": "RGBA32F",
+      "channels": {
+        "iChannel0": {
+          "buffer": "Buffer A",
+          "frame": "previous",
+          "filter": "linear",
+          "wrap": "clamp",
+          "vflip": false
+        },
+        "iChannel1": {
+          "file": "../../assets/logos/generated/logo_atlas.png",
+          "filter": "linear-mipmap-linear",
+          "wrap": "clamp",
+          "vflip": true,
+          "format": "RGBA8",
+          "colorSpace": "sRGB values decoded explicitly in shader"
+        }
+      }
+    },
+    {
+      "name": "Image",
+      "file": "image.glsl",
+      "channels": {
+        "iChannel0": {
+          "buffer": "Buffer A",
+          "frame": "current",
+          "filter": "linear",
+          "wrap": "clamp",
+          "vflip": false
+        }
+      }
+    }
+  ],
+  "presets": "../../preview/hero-presets.json",
+  "defaultPreset": "R5"
+}
