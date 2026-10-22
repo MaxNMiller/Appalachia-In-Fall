@@ -1,7 +1,7 @@
 {
   "title": "Appalachia in Fall",
   "runner": "preview/runner.js (bundled WebGL2)",
-  "author": "Artwork: Max Miller. Based on Rainforest by Inigo Quilez, 2016.",
+  "author": "Artwork: Max Miller. Inspired by Inigo Quilez.",
   "passes": [
     {
       "name": "Buffer A",
